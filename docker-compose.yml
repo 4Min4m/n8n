@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    restart: always
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME} # might not need this for local Codespace use, but good for custom domains
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http # Use http for Codespace if not configuring SSL
+      - NODE_ENV=production
+      - WEBHOOK_URL=http://localhost:5678/ # This will be important for webhooks
+      - GENERIC_TIMEZONE=Europe/Amsterdam
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+volumes:
+  n8n_data:
