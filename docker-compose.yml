@@ -11,6 +11,7 @@ services:
       - N8N_PORT=5678
       - N8N_PROTOCOL=http # Use http for Codespace if not configuring SSL
       - NODE_ENV=production
+      - N8N_ADDITIONAL_NPM_PACKAGES=xml2js
       - WEBHOOK_URL=http://localhost:5678/ # This will be important for webhooks
       - GENERIC_TIMEZONE=Europe/Amsterdam
     volumes:
