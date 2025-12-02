@@ -11,6 +11,7 @@ services:
       - N8N_PORT=5678
       - N8N_PROTOCOL=http # Use http for Codespace if not configuring SSL
       - NODE_ENV=production
+      - N8N_PUSH_BACKEND=polling
       - N8N_ADDITIONAL_NPM_PACKAGES=xml2js
       - WEBHOOK_URL=https://fuzzy-funicular-545q96prq49h4g7v-5678.app.github.dev/ # This will be important for webhooks
       - GENERIC_TIMEZONE=Europe/Amsterdam
