@@ -12,7 +12,7 @@ services:
       - N8N_PROTOCOL=http # Use http for Codespace if not configuring SSL
       - NODE_ENV=production
       - N8N_ADDITIONAL_NPM_PACKAGES=xml2js
-      - WEBHOOK_URL=https://fantastic-meme-9qw9xv45996hqpj-5678.app.github.dev/ # This will be important for webhooks
+      - WEBHOOK_URL=https://fuzzy-funicular-545q96prq49h4g7v-5678.app.github.dev/ # This will be important for webhooks
       - GENERIC_TIMEZONE=Europe/Amsterdam
     volumes:
       - n8n_data:/home/node/.n8n
